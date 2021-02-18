@@ -1,13 +1,380 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color: #3c3c3b;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul[class],
+ol[class] {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a.text:active,
+a.text:hover,
+a.text,
+a {
+  display: block;
+  text-decoration: none;
+  color: #000000cc;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+button:active,
+button:focus {
+  outline: none;
+}
+h1 {
+  font-weight: 300;
+}
+.toggle {
+  position: fixed;
+  right: 2vw;
+  top: 80px;
+  background: #ec8c33;
+  width: 60px;
+  height: 46px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+}
+.toggle:hover {
+  background: #ffa558;
+}
+.l-header {
+  -webkit-box-shadow: 0 2px rgb(0 0 0 / 20%);
+          box-shadow: 0 2px rgb(0 0 0 / 20%);
+}
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  min-height: 73px;
+}
+.header-logo-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-logo {
+  width: 282px;
+  height: 50px;
+  background: url(https://www.imumk.ru/Content/skins/bubble/images/logo.svg)
+  center/contain no-repeat;
+}
+.menu-host {
+  margin: 27px 25px 20px 12px;
+}
+.menu-burger {
+  font-size: 0;
+  width: 35px;
+  height: 24px;
+  position: relative;
+}
+.menu-burger span {
+  position: absolute;
+  top: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: #00c1ff;
+}
+.menu-burger span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 10px;
+  background-color: #00c1ff;
+}
+.menu-burger span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 20px;
+  background-color: #00c1ff;
+}
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-btn {
+  width: 145px;
+  height: 43px;
+  line-height: 43px;
+  border-radius: 10px;
+  margin: 0 4px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  font-size: 17.5px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00c0ff), to(#00c0ff));
+  background: -o-linear-gradient(#00c0ff, #00c0ff);
+  background: linear-gradient(#00c0ff, #00c0ff);
+}
+.header-btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00cbff), to(#0056f9));
+  background: -o-linear-gradient(#00cbff, #0056f9);
+  background: linear-gradient(#00cbff, #0056f9);
+}
+.l-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.heading {
+  font-size: 36px;
+  text-align: center;
+  margin: 0.67em 0;
+}
+.courses {
+  margin-top: 30px;
+}
+.courses-form {
+  display: block;
+  padding: 0 15px;
+  overflow: auto;
+}
+.courses-form > div {
+  padding: 0 11px;
+  width: 25%;
+  float: left;
+}
+select,
+input {
+  padding: 0.3em 0.5em;
+  height: 2.3em;
+  background-color: #fff;
+  border: 1px solid #706f6f;
+  border-radius: 6px;
+  width: 100%;
+  font: inherit;
+  font-size: 14px;
+}
+select:active,
+select:focus,
+input:active,
+input:focus {
+  outline: none;
+}
+select:active,
+input:focus,
+input:active {
+  border: 1px solid #00c0ff;
+}
+.courses-form div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.courses-form-search-btn {
+  margin-left: 6px;
+  width: 32px;
+  height: 32px;
+  background: #fff
+    url(https://www.imumk.ru/Content/skins/bubble/images/icons/icon-search-25.png)
+    center no-repeat;
+}
+.courses-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  list-style: none;
+  margin: 60px 0 20px;
+}
+.courses-sci {
+  display: block;
+  margin: 0 15px 55px;
+  width: 170px;
+  min-height: 260px;
+  border: solid 1px #b5b5b5;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+.sci-info {
+  padding: 10px 16px;
+}
+.sci-title {
+  padding-left: 0.5em;
+  font-size: 14px;
+}
+.sci-grade {
+  padding-left: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 14px;
+}
+.sci-genre {
+  font-size: 11px;
+  padding-left: 0.5em;
+  margin-bottom: 0.4em;
+  line-height: 22px;
+}
+.sci-meta {
+  margin: 0.4em 0;
+  padding-left: 0.5em;
+  font-size: 12px;
+  line-height: 22px;
+}
+.sci-meta a {
+  color: #00c1ff;
+}
+.sci-controls a {
+  width: 136px;
+  height: 26px;
+  color: #fff;
+  border-radius: 6px;
+  background: #00c1ff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 26px;
+}
+.l-footer {
+  background: #3c3c3c;
+}
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 6px 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 43px;
+  color: #fff;
+  font-size: 12px;
+}
+.footer a {
+  display: inline;
+  color: #fff;
+}
+.footer-social {
+  padding-top: 3px;
+}
+.footer-info {
+  text-align: end;
+}
+
+@media only screen and (max-width: 927px) {
+  .toggle {
+    top: 20px;
+  }
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-logo-menu {
+    display: block;
+  }
+  .header-logo {
+    margin: 10px auto;
+  }
+  .menu-host {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    margin: 0;
+  }
+  .header-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 17px 0 15px;
+  }
+  .header-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .courses-form > div {
+    width: 33.3333%;
+    padding-bottom: 15px;
+  }
+  .courses-form  div:last-child {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-legal,
+  .footer-social {
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  .footer-legal,
+  .footer-info {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .toggle {
+    top: 10px;
+    right: 10px;
+  }
+  .header-logo {
+    margin-top: 50px;
+    width: 250px;
+  }
+  .menu-host {
+    top: 15px;
+    left: 15px;
+  }
+  .courses-form > div {
+    width: 100%;
+  }
 }
