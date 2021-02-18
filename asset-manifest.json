@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/phisicon/static/css/main.826544f1.chunk.css",
+    "main.js": "/phisicon/static/js/main.257c17f6.chunk.js",
+    "main.js.map": "/phisicon/static/js/main.257c17f6.chunk.js.map",
+    "runtime-main.js": "/phisicon/static/js/runtime-main.25619173.js",
+    "runtime-main.js.map": "/phisicon/static/js/runtime-main.25619173.js.map",
+    "static/js/2.bdb79c3d.chunk.js": "/phisicon/static/js/2.bdb79c3d.chunk.js",
+    "static/js/2.bdb79c3d.chunk.js.map": "/phisicon/static/js/2.bdb79c3d.chunk.js.map",
+    "static/js/3.62981385.chunk.js": "/phisicon/static/js/3.62981385.chunk.js",
+    "static/js/3.62981385.chunk.js.map": "/phisicon/static/js/3.62981385.chunk.js.map",
+    "index.html": "/phisicon/index.html",
+    "static/css/main.826544f1.chunk.css.map": "/phisicon/static/css/main.826544f1.chunk.css.map",
+    "static/js/2.bdb79c3d.chunk.js.LICENSE.txt": "/phisicon/static/js/2.bdb79c3d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25619173.js",
+    "static/js/2.bdb79c3d.chunk.js",
+    "static/css/main.826544f1.chunk.css",
+    "static/js/main.257c17f6.chunk.js"
+  ]
+}
