@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import axios from "axios";
-import Course from "./components/Course";
+const Course = lazy(() => import("./components/Course"));
 
 function App() {
   const imagesLink = "https://www.imumk.ru/svc/coursecover/";
@@ -176,6 +176,7 @@ const filteredCourses = courses.filter(n => (
               </div>
             </form>
           </div>
+          <Suspense fallback={<div className="loader"></div>}>
           <ul className="courses-list">
             {filteredCourses.map((obj, index) => (
               <Course
@@ -191,6 +192,7 @@ const filteredCourses = courses.filter(n => (
               />
             ))}
           </ul>
+          </Suspense>
         </main>
       </div>
       <footer className="l-footer">
