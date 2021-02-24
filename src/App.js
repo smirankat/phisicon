@@ -176,8 +176,8 @@ const filteredCourses = courses.filter(n => (
               </div>
             </form>
           </div>
-          <Suspense fallback={<div className="loader"></div>}>
           <ul className="courses-list">
+          <Suspense fallback={<div className="loader"></div>}>
             {filteredCourses.map((obj, index) => (
               <Course
                 key={obj.courseHash}
@@ -191,8 +191,8 @@ const filteredCourses = courses.filter(n => (
                 units={units}
               />
             ))}
-          </ul>
           </Suspense>
+          </ul>
         </main>
       </div>
       <footer className="l-footer">
