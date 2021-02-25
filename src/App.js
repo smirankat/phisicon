@@ -62,11 +62,15 @@ function App() {
     `${imagesLink}4712`,
   ];
   const [courses, setCourses] = useState([]);
+  const [isFetching, setIsFetching] = useState(false)
+
   useEffect(() => {
+    setIsFetching(true)
     axios
       .post("https://krapipl.imumk.ru:8443/api/mobilev1/update", {})
       .then(function (response) {
         // console.log(response);
+        setIsFetching(false)
         setCourses(response.data.items);
       });
   }, []);
@@ -84,7 +88,6 @@ const [genre, setGenre] = useState('')
 const [grade, setGrade] = useState('')
 const [searchValue, setSearchValue] = useState("")
 const [searchValueToSubmit, setSearchValueToSubmit] = useState("")
-
 
 const onSubjectChange = e => setSubject(e.target.value)
 const onGenreChange = e => setGenre(e.target.value)
@@ -177,6 +180,7 @@ const filteredCourses = courses.filter(n => (
             </form>
           </div>
           <ul className="courses-list">
+            {isFetching ? <div className="loader"></div> : null}
           <Suspense fallback={<div className="loader"></div>}>
             {filteredCourses.map((obj, index) => (
               <Course
