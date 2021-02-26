@@ -74,6 +74,7 @@ function App() {
         setCourses(response.data.items);
       });
   }, []);
+
   const [units, setUnits] = useState(true);
   const toggleUnits = () => {
     setUnits(!units);
@@ -182,11 +183,11 @@ const filteredCourses = courses.filter(n => (
           <ul className="courses-list">
             {isFetching ? <div className="loader"></div> : null}
           <Suspense fallback={<div className="loader"></div>}>
-            {filteredCourses.map((obj, index) => (
+            {filteredCourses.map((obj, i) => (
               <Course
                 key={obj.courseHash}
                 courseId={obj.courseId}
-                coursesImagesLinks={coursesImagesLinks[index]}
+                coursesImagesLinks={coursesImagesLinks[i]}
                 genre={obj.genre}
                 grade={obj.grade}
                 subject={obj.subject}

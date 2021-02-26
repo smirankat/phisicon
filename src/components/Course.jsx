@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 function Course({ courseId, coursesImagesLinks, genre, grade, subject, price, priceBonus, units }) {
-  const [tryButton, setTryButton] = useState(['Попробовать', 'Попробовать'])
-  const handleClick = () => {
-    setTryButton([`${price} руб.`, `${priceBonus} бонусов`])
+
+  const [tryButton, setTryButton] = useState(true);
+  const handleTryButton = (i) => {
+   setTryButton(!tryButton)
   }
 
   return (
@@ -20,8 +21,8 @@ function Course({ courseId, coursesImagesLinks, genre, grade, subject, price, pr
           <a>Подробнее</a>
         </p>
         <p className="sci-controls">
-        <a href="##" onClick={handleClick}>
-          {units ? tryButton[0] : tryButton[1]}
+        <a href="##" onClick={() => handleTryButton()}>
+          {(tryButton) ? 'Поробовать' : (units) ? price + ' руб.' : priceBonus + ' бонусов'}
         </a>
         </p>
       </div>
