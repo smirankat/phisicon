@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Course({ courseId, coursesImagesLinks, genre, grade, subject, price, priceBonus, units }) {
+function Course({ courseId, coursesImagesLink, genre, grade, subject, price, priceBonus, units }) {
 
   const [tryButton, setTryButton] = useState(true);
   const handleTryButton = (i) => {
@@ -10,7 +10,7 @@ function Course({ courseId, coursesImagesLinks, genre, grade, subject, price, pr
   return (
     <li className="courses-sci">
       <div className="sci-figure">
-        <img src={coursesImagesLinks} alt="" />
+        <img src={coursesImagesLink} alt="" />
       </div>
       <div className="sci-info">
         {/* <p>{courseId}</p> */}

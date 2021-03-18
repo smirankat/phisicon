@@ -4,63 +4,6 @@ const Course = lazy(() => import("./components/Course"));
 
 function App() {
   const imagesLink = "https://www.imumk.ru/svc/coursecover/";
-  const coursesImagesLinks = [
-    `${imagesLink}80`,
-    `${imagesLink}81`,
-    `${imagesLink}82`,
-    `${imagesLink}55`,
-    `${imagesLink}61`,
-    `${imagesLink}27`,
-    `${imagesLink}50`,
-    `${imagesLink}79`,
-    `${imagesLink}51`,
-    `${imagesLink}4415`,
-    `${imagesLink}56`,
-    `${imagesLink}57`,
-    `${imagesLink}53`,
-    `${imagesLink}58`,
-    `${imagesLink}4416`,
-    `${imagesLink}76`,
-    `${imagesLink}77`,
-    `${imagesLink}78`,
-    `${imagesLink}67`,
-    `${imagesLink}69`,
-    `${imagesLink}68`,
-    `${imagesLink}48`,
-    `${imagesLink}65`,
-    `${imagesLink}64`,
-    `${imagesLink}62`,
-    `${imagesLink}63`,
-    `${imagesLink}4411`,
-    `${imagesLink}4552`,
-    `${imagesLink}74`,
-    `${imagesLink}75`,
-    `${imagesLink}4405`,
-    `${imagesLink}4406`,
-    `${imagesLink}4410`,
-    `${imagesLink}111`,
-    `${imagesLink}108`,
-    `${imagesLink}109`,
-    `${imagesLink}110`,
-    `${imagesLink}4188`,
-    `${imagesLink}4169`,
-    `${imagesLink}4170`,
-    `${imagesLink}83`,
-    `${imagesLink}84`,
-    `${imagesLink}85`,
-    `${imagesLink}4409`,
-    `${imagesLink}70`,
-    `${imagesLink}73`,
-    `${imagesLink}72`,
-    `${imagesLink}4413`,
-    `${imagesLink}134`,
-    `${imagesLink}132`,
-    `${imagesLink}133`,
-    `${imagesLink}60`,
-    `${imagesLink}59`,
-    `${imagesLink}4414`,
-    `${imagesLink}4712`,
-  ];
   const [courses, setCourses] = useState([]);
   const [isFetching, setIsFetching] = useState(false)
 
@@ -187,7 +130,7 @@ const filteredCourses = courses.filter(n => (
               <Course
                 key={obj.courseHash}
                 courseId={obj.courseId}
-                coursesImagesLinks={coursesImagesLinks[i]}
+                coursesImagesLink={`${imagesLink}${obj.courseId}`}
                 genre={obj.genre}
                 grade={obj.grade}
                 subject={obj.subject}
